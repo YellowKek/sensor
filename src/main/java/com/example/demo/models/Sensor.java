@@ -3,11 +3,16 @@ package com.example.demo.models;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name="sensors")
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Sensor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,4 +22,7 @@ public class Sensor {
     @Column(name = "name")
     @NotNull(message = "name should not be empty")
     private String name;
+
+    @OneToMany
+    private List<Measurement> measurement;
 }
