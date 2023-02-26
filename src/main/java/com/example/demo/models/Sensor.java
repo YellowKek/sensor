@@ -22,7 +22,4 @@ public class Sensor {
     @Column(name = "name")
     @NotNull(message = "name should not be empty")
     private String name;
-
-    @OneToMany
-    private List<Measurement> measurement;
 }
