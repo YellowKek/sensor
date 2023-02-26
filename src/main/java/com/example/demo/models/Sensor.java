@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="sensors")
+@Table(name = "sensors")
 @Getter
 @Setter
 @NoArgsConstructor
