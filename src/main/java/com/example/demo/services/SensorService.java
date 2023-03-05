@@ -44,4 +44,8 @@ public class SensorService {
         updSensor.setId(id);
         save(updSensor);
     }
+
+    public Optional<Sensor> findByName(String name) {
+        return sensorRepo.findByName(name);
+    }
 }

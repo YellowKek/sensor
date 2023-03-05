@@ -28,7 +28,6 @@ public class Measurement {
     @NotNull
     private boolean raining;
     @Column(name = "measurement_date_time")
-    @NotNull
     private LocalDateTime measurementDateTime;
     @NotNull
     @ManyToOne
